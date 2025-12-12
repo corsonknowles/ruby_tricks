@@ -124,11 +124,11 @@ end
 puts "\nMock object:"
 mock_db = Object.new
 
+# Initialize the data array first
+mock_db.instance_eval { @data = [] }
+
+# Then add singleton methods
 class << mock_db
-  def initialize
-    @data = []
-  end
-  
   def insert(item)
     @data << item
     true
@@ -143,7 +143,6 @@ class << mock_db
   end
 end
 
-mock_db.instance_eval { @data = [] }
 mock_db.insert("item1")
 mock_db.insert("item2")
 puts "Count: #{mock_db.count}"

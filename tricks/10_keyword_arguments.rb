@@ -80,4 +80,5 @@ puts "\nRuby 3.0+ shorthand:"
 name = "Alice"
 age = 30
 print_person(name: name, age: age)  # Old way
-# print_person(name:, age:)  # Ruby 3.0+ shorthand (uncomment if using Ruby 3.0+)
+# Ruby 3.0+ introduced shorthand syntax (requires Ruby >= 3.1):
+# print_person(name:, age:)  # Shorthand when variable name matches key

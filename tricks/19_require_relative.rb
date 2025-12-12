@@ -29,8 +29,8 @@ helper_content = <<~RUBY
   end
 RUBY
 
-# Create a temporary helper file to demonstrate
-require 'fileutils'
+# Create a temporary helper file to demonstrate require_relative behavior
+# (fileutils not actually needed - using File.write instead)
 helper_path = File.join(__dir__, 'helper_temp.rb')
 File.write(helper_path, helper_content)
 
